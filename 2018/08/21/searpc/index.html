@@ -79,13 +79,19 @@
 
 
 
-<meta property="og:type" content="website">
+<meta name="description" content="searpc的实现searpc是一个C语言的库，基于glib系统，searpc只处理序列号和反序列化，传输的工作留给了使用者。序列号和反序列化使用json（json-glib库），当客户端调用一个rpc会返回一个序列号的json对象。在server端定义的每个rpc函数都需要携带一个GError参数表示此次调用是否出错，返回的数据包含了以下参数12345&amp;#123;    ret:&amp;quot;&amp;q">
+<meta property="og:type" content="article">
 <meta property="og:title" content="long qun">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/08/21/searpc/index.html">
 <meta property="og:site_name" content="long qun">
+<meta property="og:description" content="searpc的实现searpc是一个C语言的库，基于glib系统，searpc只处理序列号和反序列化，传输的工作留给了使用者。序列号和反序列化使用json（json-glib库），当客户端调用一个rpc会返回一个序列号的json对象。在server端定义的每个rpc函数都需要携带一个GError参数表示此次调用是否出错，返回的数据包含了以下参数12345&amp;#123;    ret:&amp;quot;&amp;q">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/08/21/searpc/rpc-1.png">
+<meta property="og:updated_time" content="2018-08-21T09:14:26.218Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="long qun">
+<meta name="twitter:description" content="searpc的实现searpc是一个C语言的库，基于glib系统，searpc只处理序列号和反序列化，传输的工作留给了使用者。序列号和反序列化使用json（json-glib库），当客户端调用一个rpc会返回一个序列号的json对象。在server端定义的每个rpc函数都需要携带一个GError参数表示此次调用是否出错，返回的数据包含了以下参数12345&amp;#123;    ret:&amp;quot;&amp;q">
+<meta name="twitter:image" content="http://yoursite.com/2018/08/21/searpc/rpc-1.png">
 
 
 
@@ -115,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/21/searpc/"/>
 
 
 
 
 
-  <title>long qun</title>
+  <title> | long qun</title>
   
 
 
@@ -140,8 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,9 +249,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -276,9 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/21/searpc/" itemprop="url">未命名</a></h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -328,9 +331,7 @@
       
 
       
-        
-          
-            <h1 id="searpc的实现"><a href="#searpc的实现" class="headerlink" title="searpc的实现"></a>searpc的实现</h1><p>searpc是一个C语言的库，基于glib系统，searpc只处理序列号和反序列化，传输的工作留给了使用者。<br><br>序列号和反序列化使用json（json-glib库），当客户端调用一个rpc会返回一个序列号的json对象。<br><br>在server端定义的每个rpc函数都需要携带一个GError参数表示此次调用是否出错，返回的数据包含了以下参数<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    ret:&quot;&quot;,</span><br><span class="line">    error_code:&quot;&quot;,</span><br><span class="line">    err_msg:&quot;&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <h1 id="searpc的实现"><a href="#searpc的实现" class="headerlink" title="searpc的实现"></a>searpc的实现</h1><p>searpc是一个C语言的库，基于glib系统，searpc只处理序列号和反序列化，传输的工作留给了使用者。<br><br>序列号和反序列化使用json（json-glib库），当客户端调用一个rpc会返回一个序列号的json对象。<br><br>在server端定义的每个rpc函数都需要携带一个GError参数表示此次调用是否出错，返回的数据包含了以下参数<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    ret:&quot;&quot;,</span><br><span class="line">    error_code:&quot;&quot;,</span><br><span class="line">    err_msg:&quot;&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><br></p>
 <h2 id="searpc使用的数据结构分析"><a href="#searpc使用的数据结构分析" class="headerlink" title="searpc使用的数据结构分析"></a>searpc使用的数据结构分析</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">//用来存储序列化函数 key signature  value 具体序列化函数</span><br><span class="line">static GHashTable *marshal_table;</span><br><span class="line">//保存服务对应的所有的函数 key service_name value 具体服务所提供的函数</span><br><span class="line">static GHashTable *service_table;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//用来序列化使用</span><br><span class="line">typedef struct MarshalItem &#123;</span><br><span class="line">    //将json解析成为调用函数参数</span><br><span class="line">    SearpcMarshalFunc mfunc;</span><br><span class="line">    gchar *signature;</span><br><span class="line">&#125; MarshalItem;</span><br><span class="line"></span><br><span class="line">typedef struct FuncItem &#123;</span><br><span class="line">    //调用的函数指针</span><br><span class="line">    void        *func;</span><br><span class="line">    //函数名</span><br><span class="line">    gchar       *fname;</span><br><span class="line">    //序列号或者反序列化使用</span><br><span class="line">    MarshalItem *marshal;</span><br><span class="line">&#125; FuncItem;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//不同服务的函数不同，一个server可以提供很多服务</span><br><span class="line">typedef struct &#123;</span><br><span class="line">    char *name;</span><br><span class="line">    //服务对应的函数根据函数名来</span><br><span class="line">    GHashTable *func_table;</span><br><span class="line">&#125; SearpcService;</span><br></pre></td></tr></table></figure>
 <p>其中有两个头文件是通过编译的时候通过python生成的  searpc-marshal.h  searpc-signature.h<br><br>searpc-marshal的是序列化的时候具体的实现 <br><br>searpc-signature是用来计算marsha的signatrue的<br> </p>
@@ -346,8 +347,6 @@
 <p>客户端如何反序列化呢？<br></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">GList*</span><br><span class="line">searpc_client_call__objlist (SearpcClient *client, const char *fname,</span><br><span class="line">                             GType object_type,</span><br><span class="line">                             GError **error, int n_params, ...)</span><br><span class="line">&#123;</span><br><span class="line">    g_return_val_if_fail (fname != NULL, NULL);</span><br><span class="line">    g_return_val_if_fail (object_type != 0, NULL);</span><br><span class="line"></span><br><span class="line">    va_list args;</span><br><span class="line">    gsize len, ret_len;</span><br><span class="line">    char *fstr;</span><br><span class="line"></span><br><span class="line">    va_start (args, n_params);</span><br><span class="line">    fstr = fcall_to_str (fname, n_params, args, &amp;len);</span><br><span class="line">    va_end (args);</span><br><span class="line"></span><br><span class="line">    if (!fstr) &#123;</span><br><span class="line">        g_set_error (error, DFT_DOMAIN, 0, &quot;Invalid Parameter&quot;);</span><br><span class="line">        return NULL;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    char *fret = searpc_client_transport_send (client, fstr, len, &amp;ret_len);</span><br><span class="line">    if (!fret) &#123;</span><br><span class="line">        g_free (fstr);</span><br><span class="line">        g_set_error (error, DFT_DOMAIN, TRANSPORT_ERROR_CODE, TRANSPORT_ERROR);</span><br><span class="line">        return NULL;</span><br><span class="line">    &#125;</span><br><span class="line">    //重点 object_type是之前传入的需要返回的gtype就是依赖这个返回所需要的结构</span><br><span class="line">    GList *ret = searpc_client_fret__objlist (object_type, fret, ret_len, error);</span><br><span class="line">    g_free (fstr);</span><br><span class="line">    g_free (fret);</span><br><span class="line">    return ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">GList*</span><br><span class="line">searpc_client_fret__objlist (GType gtype, char *data, size_t len, GError **error)</span><br><span class="line">&#123;</span><br><span class="line">    json_t *object = NULL;</span><br><span class="line">    GList  *ret = NULL;</span><br><span class="line"></span><br><span class="line">    if (handle_ret_common(data, len, &amp;object, error) == 0) &#123;</span><br><span class="line">        const json_t *array = json_object_get (object, &quot;ret&quot;);</span><br><span class="line">        if (json_is_null(array)) &#123;</span><br><span class="line">            json_decref(object);</span><br><span class="line">            return NULL;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        g_assert (array);</span><br><span class="line"></span><br><span class="line">        int i;</span><br><span class="line">        for (i = 0; i &lt; json_array_size(array); i++) &#123;</span><br><span class="line">            json_t *member = json_array_get (array, i);</span><br><span class="line">            //重点如何转换的实现在这里</span><br><span class="line">            GObject *obj = json_gobject_deserialize(gtype, member);</span><br><span class="line">            if (obj == NULL) &#123;</span><br><span class="line">                g_set_error (error, DFT_DOMAIN, 503, </span><br><span class="line">                             &quot;Invalid data: object list contains null&quot;);</span><br><span class="line">                clean_objlist(ret);</span><br><span class="line">                json_decref(object);</span><br><span class="line">                return NULL;</span><br><span class="line">            &#125;</span><br><span class="line">            ret = g_list_prepend (ret, obj);</span><br><span class="line">        &#125;</span><br><span class="line">        json_decref(object);</span><br><span class="line">        return g_list_reverse(ret);</span><br><span class="line">    &#125;</span><br><span class="line">    return NULL;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//序列化的实现</span><br><span class="line">GObject *json_gobject_deserialize (GType gtype, json_t *object)</span><br><span class="line">&#123;</span><br><span class="line">    GObjectClass *klass;</span><br><span class="line">    GObject *ret;</span><br><span class="line">    guint n_members, i;</span><br><span class="line">    json_t *head, *member;</span><br><span class="line">    const char *member_name;</span><br><span class="line">    GArray *construct_params;</span><br><span class="line"></span><br><span class="line">    klass = g_type_class_ref (gtype);</span><br><span class="line">    n_members = json_object_size (object);</span><br><span class="line">    construct_params = g_array_sized_new (FALSE, FALSE, sizeof (GParameter), n_members);</span><br><span class="line">    head = json_object_iter (object);</span><br><span class="line"></span><br><span class="line">    //遍历json数据 里面有结构体的名称和值</span><br><span class="line">    for (member=head; member; member=json_object_iter_next (object, member)) &#123;</span><br><span class="line">        GParamSpec *pspec;</span><br><span class="line">        GParameter param = &#123; NULL, &#125;;</span><br><span class="line">        const char *member_name = json_object_iter_key (member);</span><br><span class="line">        json_t *val = json_object_iter_value(member);</span><br><span class="line"></span><br><span class="line">        pspec = g_object_class_find_property (klass, member_name);</span><br><span class="line"></span><br><span class="line">        if (!pspec)</span><br><span class="line">            continue;</span><br><span class="line"></span><br><span class="line">        if (pspec-&gt;flags &amp; G_PARAM_CONSTRUCT_ONLY)</span><br><span class="line">            continue;</span><br><span class="line"></span><br><span class="line">        if (!(pspec-&gt;flags &amp; G_PARAM_WRITABLE))</span><br><span class="line">            continue;</span><br><span class="line"></span><br><span class="line">        g_value_init(&amp;param.value, G_PARAM_SPEC_VALUE_TYPE (pspec));</span><br><span class="line"></span><br><span class="line">        //设置数据结构的名称和值</span><br><span class="line">        if (json_deserialize_pspec (&amp;param.value, pspec, val)) &#123;</span><br><span class="line">            param.name = g_strdup (pspec-&gt;name);</span><br><span class="line">            g_array_append_val (construct_params, param);</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">            g_warning (&quot;Failed to deserialize \&quot;%s\&quot; property of type \&quot;%s\&quot; for an object of type \&quot;%s\&quot;&quot;,</span><br><span class="line">                       pspec-&gt;name, g_type_name (G_VALUE_TYPE (&amp;param.value)), g_type_name (gtype));</span><br><span class="line">    &#125;</span><br><span class="line">    //构建成功</span><br><span class="line">    ret = g_object_newv (gtype, construct_params-&gt;len, (GParameter *) construct_params-&gt;data);</span><br><span class="line"></span><br><span class="line">    for (i=0; i!= construct_params-&gt;len; ++i) &#123;</span><br><span class="line">        GParameter *param = &amp;g_array_index (construct_params, GParameter, i);</span><br><span class="line">        g_free ((gchar *) param-&gt;name);</span><br><span class="line">        g_value_unset (&amp;param-&gt;value);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    g_array_free(construct_params, TRUE);</span><br><span class="line">    g_type_class_unref(klass);</span><br><span class="line"></span><br><span class="line">    return ret;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//根据具体json类型设置值</span><br><span class="line">static gboolean json_deserialize_pspec (GValue *value, GParamSpec *pspec, json_t *node)</span><br><span class="line">&#123;</span><br><span class="line">    switch (json_typeof(node)) &#123;</span><br><span class="line">        case JSON_OBJECT:</span><br><span class="line">            if (g_type_is_a (G_VALUE_TYPE (value), G_TYPE_OBJECT)) &#123;</span><br><span class="line">                GObject *object;</span><br><span class="line">                object = json_gobject_deserialize (G_VALUE_TYPE (value), node);</span><br><span class="line">                if (object)</span><br><span class="line">                  g_value_take_object (value, object);</span><br><span class="line">                else</span><br><span class="line">                  g_value_set_object (value, NULL);</span><br><span class="line"></span><br><span class="line">                return TRUE;</span><br><span class="line">            &#125;</span><br><span class="line">            break;</span><br><span class="line">      case JSON_STRING:</span><br><span class="line">          if (G_TYPE_FUNDAMENTAL (G_VALUE_TYPE (value)) == G_TYPE_STRING) &#123;</span><br><span class="line">              g_value_set_string(value, json_string_value(node));</span><br><span class="line">              return TRUE;</span><br><span class="line">          &#125;</span><br><span class="line">          break;</span><br><span class="line">      case JSON_INTEGER:</span><br><span class="line">          &#123;</span><br><span class="line">              json_int_t int_value = json_integer_value (node);</span><br><span class="line">              switch (G_TYPE_FUNDAMENTAL (G_VALUE_TYPE (value))) &#123;</span><br><span class="line">                  case G_TYPE_CHAR:</span><br><span class="line">                      g_value_set_schar(value, (gchar)int_value);</span><br><span class="line">                      return TRUE;</span><br><span class="line">                  case G_TYPE_UCHAR:</span><br><span class="line">                      g_value_set_uchar (value, (guchar)int_value);</span><br><span class="line">                      return TRUE;</span><br><span class="line">                  case G_TYPE_INT:</span><br><span class="line">                      g_value_set_int (value, (gint)int_value);</span><br><span class="line">                      return TRUE;</span><br><span class="line">                  case G_TYPE_UINT:</span><br><span class="line">                      g_value_set_uint(value, (guint)int_value);</span><br><span class="line">                      return TRUE;</span><br><span class="line">                  case G_TYPE_LONG:</span><br><span class="line">                      g_value_set_long(value, (glong)int_value);</span><br><span class="line">                      return TRUE;</span><br><span class="line">                  case G_TYPE_ULONG:</span><br><span class="line">                      g_value_set_ulong(value, (gulong)int_value);</span><br><span class="line">                      return TRUE;</span><br><span class="line">                  case G_TYPE_INT64:</span><br><span class="line">                      g_value_set_int64(value,(gint64)int_value);</span><br><span class="line">                      return TRUE;</span><br><span class="line">                  case G_TYPE_ENUM:</span><br><span class="line">                      g_value_set_enum(value,(gint64)int_value);</span><br><span class="line">                      return TRUE;</span><br><span class="line">                  case G_TYPE_FLAGS:</span><br><span class="line">                      g_value_set_flags(value,(gint64)int_value);</span><br><span class="line">                      return TRUE;</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;</span><br><span class="line">          break;</span><br><span class="line">      case JSON_REAL:</span><br><span class="line">          &#123;</span><br><span class="line">              double real_value = json_real_value(node);</span><br><span class="line">              switch (G_TYPE_FUNDAMENTAL (G_VALUE_TYPE (value))) &#123;</span><br><span class="line">                  case G_TYPE_FLOAT:</span><br><span class="line">                    g_value_set_float(value,(gfloat)real_value);</span><br><span class="line">                    return TRUE;</span><br><span class="line">                  case G_TYPE_DOUBLE:</span><br><span class="line">                    g_value_set_double(value,(gdouble)real_value);</span><br><span class="line">                    return TRUE;</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        break;</span><br><span class="line">      case JSON_TRUE:</span><br><span class="line">      case JSON_FALSE:</span><br><span class="line">          if (G_TYPE_FUNDAMENTAL (G_VALUE_TYPE (value)) == G_TYPE_BOOLEAN) &#123;</span><br><span class="line">              g_value_set_boolean(value,(gboolean)json_is_true(node));</span><br><span class="line">              return TRUE;</span><br><span class="line">          &#125;</span><br><span class="line">          break;</span><br><span class="line">      case JSON_NULL:</span><br><span class="line">          if (G_TYPE_FUNDAMENTAL (G_VALUE_TYPE (value)) == G_TYPE_STRING) &#123;</span><br><span class="line">              g_value_set_string (value, NULL);</span><br><span class="line">              return TRUE;</span><br><span class="line">          &#125;</span><br><span class="line">          else if (G_TYPE_FUNDAMENTAL (G_VALUE_TYPE (value)) == G_TYPE_OBJECT) &#123;</span><br><span class="line">              g_value_set_object (value, NULL);</span><br><span class="line">              return TRUE;</span><br><span class="line">          &#125;</span><br><span class="line">          break;</span><br><span class="line">      case JSON_ARRAY:</span><br><span class="line">          return FALSE;</span><br><span class="line">          break;</span><br><span class="line">      default:</span><br><span class="line">          return FALSE;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">//glib还是有东西的</span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
     
@@ -364,153 +363,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/06/01/test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="long qun">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="long qun">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/06/01/test/" itemprop="url">title</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-06-01T23:47:44+08:00">
-                2016-06-01
-              </time>
+              <a href="/2016/06/01/test/" rel="next" title="title">
+                <i class="fa fa-chevron-left"></i> title
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo教程/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo教程</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -520,10 +394,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -531,6 +406,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -551,8 +430,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -612,6 +500,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#searpc的实现"><span class="nav-number">1.</span> <span class="nav-text">searpc的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#searpc使用的数据结构分析"><span class="nav-number">1.1.</span> <span class="nav-text">searpc使用的数据结构分析</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -745,6 +649,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
